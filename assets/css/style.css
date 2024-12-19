@@ -1,438 +1,438 @@
 @font-face {
-  font-family: Caladea;
-  font-style: italic;
-  font-weight: 400;
-  src: url('../fonts/caladea-italic.ttf') format('truetype');
-  }
+	font-family: Caladea;
+	font-style: italic;
+	font-weight: 400;
+	src: url('../fonts/caladea-italic.ttf') format('truetype');
+	}
 
 @font-face {
-  font-family: Arya;
-  font-style: normal;
-  font-weight: 700;
-  src: local('Arya Bold'), local('Arya-Bold'),
-	 url('../fonts/arya-v3-latin-700.woff2') format('woff2'),
-	 url('../fonts/arya-v3-latin-700.woff') format('woff');
+	font-family: Arya;
+	font-style: normal;
+	font-weight: 700;
+	src: local('Arya Bold'), local('Arya-Bold'),
+		url('../fonts/arya-v3-latin-700.woff2') format('woff2'),
+		url('../fonts/arya-v3-latin-700.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-	 url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'),
-	 url('../fonts/open-sans-v15-latin-regular.woff') format('woff');
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans Regular'), local('OpenSans-Regular'),
+		url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'),
+		url('../fonts/open-sans-v15-latin-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: local('Open Sans Italic'), local('OpenSans-Italic'),
-	 url('../fonts/open-sans-v15-latin-italic.woff2') format('woff2'),
-	 url('../fonts/open-sans-v15-latin-italic.woff') format('woff');
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 400;
+	src: local('Open Sans Italic'), local('OpenSans-Italic'),
+		url('../fonts/open-sans-v15-latin-italic.woff2') format('woff2'),
+		url('../fonts/open-sans-v15-latin-italic.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'),
-	 url('../fonts/open-sans-v15-latin-700.woff2') format('woff2'),
-	 url('../fonts/open-sans-v15-latin-700.woff') format('woff');
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: local('Open Sans Bold'), local('OpenSans-Bold'),
+		url('../fonts/open-sans-v15-latin-700.woff2') format('woff2'),
+		url('../fonts/open-sans-v15-latin-700.woff') format('woff');
 }
 
 html {
-  height:100%;
-  margin: 0;
-  text-size-adjust: 100%;
+	height:100%;
+	margin: 0;
+	text-size-adjust: 100%;
 }
 
 * {
-  touch-action: manipulation;
-  -webkit-touch-callout: none; /* iOS Safari */ /* Safari */
-  user-select: none;
+	touch-action: manipulation;
+	-webkit-touch-callout: none; /* iOS Safari */ /* Safari */
+	user-select: none;
 }
 
 body {
-  align-items:center;
-  background: #000;
-  display: flex;
-  font-family: "Open Sans", sans-serif;
-  height:100%;
-  justify-content:center;
-  margin:0;
-  overflow:hidden;
-  padding:0;
-  position:fixed;
-  width:100%;
+	align-items:center;
+	background: #000;
+	display: flex;
+	font-family: "Open Sans", sans-serif;
+	height:100%;
+	justify-content:center;
+	margin:0;
+	overflow:hidden;
+	padding:0;
+	position:fixed;
+	width:100%;
 }
 
 .noscript {
-  display:flex;
-  font-size:36px;
-  position:absolute;
-  text-align:center;
-  z-index:9999;
+	display:flex;
+	font-size:36px;
+	position:absolute;
+	text-align:center;
+	z-index:9999;
 }
 
 #area {
-  background: radial-gradient(#f7eaab, #bfbb73);
-  flex-shrink: 0;
-  font-size:30px;
-  height:720px;
-  width:1280px;
+	background: radial-gradient(#f7eaab, #bfbb73);
+	flex-shrink: 0;
+	font-size:30px;
+	height:720px;
+	width:1280px;
 }
 
 #fader {
-  background: radial-gradient(#f7eaab, #bfbb73);
-  flex-shrink: 0;
-  height:720px;
-  opacity:1;
-  overflow:hidden;
-  pointer-events: none;
-  position:absolute;
-  transition: opacity 0.25s linear;
-  width:1280px;
-  z-index:999;
+	background: radial-gradient(#f7eaab, #bfbb73);
+	flex-shrink: 0;
+	height:720px;
+	opacity:1;
+	overflow:hidden;
+	pointer-events: none;
+	position:absolute;
+	transition: opacity 0.25s linear;
+	width:1280px;
+	z-index:999;
 }
 
 .notransition {
-  transition: none !important;
+	transition: none !important;
 }
 
 #title {
-  color:#ce181e;
-  font-family: arya, sans-serif;
-  font-size:135px;
-  font-weight:700;
-  line-height:1.2;
-  position:relative;
-  text-align:center;
+	color:#ce181e;
+	font-family: arya, sans-serif;
+	font-size:135px;
+	font-weight:700;
+	line-height:1.2;
+	position:relative;
+	text-align:center;
 }
 
 #subheading {
-  color:#948a54;
-  font-family: caladea, serif;
-  font-size:66px;
-  font-style:italic;
-  line-height:1.2;
-  margin-bottom:1.3em;
-  text-align:center;
+	color:#948a54;
+	font-family: caladea, serif;
+	font-size:66px;
+	font-style:italic;
+	line-height:1.2;
+	margin-bottom:1.3em;
+	text-align:center;
 }
 
 #titleSelection {
-  color:#376092;
-  font-size:50px;
-  margin-bottom:2.5em;
-  text-align:center;
+	color:#376092;
+	font-size:50px;
+	margin-bottom:2.5em;
+	text-align:center;
 }
 
 .flexCenter {
-  align-items:center;
-  display:flex;
-  height:100%;
-  justify-content:center;
+	align-items:center;
+	display:flex;
+	height:100%;
+	justify-content:center;
 }
 
 #titleSlide {
-  background-image:url("../img/bingoRoller.svg");
-  background-repeat:no-repeat;
-  background-size: contain;
-  height:100%;
+	background-image:url("../img/bingoRoller.svg");
+	background-repeat:no-repeat;
+	background-size: contain;
+	height:100%;
 }
 
 #howToUseSlide, #aboutCreditsSlide {
-  display:none;
-  grid-template: "helpHeader" 96px "helpNav" 44px "helpLine" 2px "helpContent" 1fr "helpFooter" 77px / 100%;
-  height:100%;
+	display:none;
+	grid-template: "helpHeader" 96px "helpNav" 44px "helpLine" 2px "helpContent" 1fr "helpFooter" 77px / 100%;
+	height:100%;
 }
 
 #onboardingSlide {
-  display:none;
-  height:100%;
+	display:none;
+	height:100%;
 }
 
 #masterBoardSlide {
-  display:none;
-  grid-template: "controlsCol  bCol  iCol  nCol  gCol  oCol" 100% / 255px 1fr 1fr 1fr 1fr 1fr;
-  height:100%;
-  overflow:hidden;
+	display:none;
+	grid-template: "controlsCol  bCol  iCol  nCol  gCol  oCol" 100% / 255px 1fr 1fr 1fr 1fr 1fr;
+	height:100%;
+	overflow:hidden;
 }
 
 #settingsSlide {
-  display:none;
-  grid-template: "helpHeader" 96px "helpContent" 1fr "helpFooter" 77px / 100%;
-  height:100%;
+	display:none;
+	grid-template: "helpHeader" 96px "helpContent" 1fr "helpFooter" 77px / 100%;
+	height:100%;
 }
 
 #winningPatternSlide {
-  display:none;
-  grid-template: "helpHeader" 96px "helpContent" 1fr "helpFooter" 77px / 100%;
-  height:100%;
+	display:none;
+	grid-template: "helpHeader" 96px "helpContent" 1fr "helpFooter" 77px / 100%;
+	height:100%;
 }
 
 h2 {
-  font-size:36px;
-  font-weight:300;
-  grid-area: helpHeader;
-  margin:22px 0;
-  text-align:center;
+	font-size:36px;
+	font-weight:300;
+	grid-area: helpHeader;
+	margin:22px 0;
+	text-align:center;
 }
 
 .controlsCol {
-  grid-area: controlsCol;
+	grid-area: controlsCol;
 }
 
 .bCol {
-  grid-area: bCol;
+	grid-area: bCol;
 }
 
 .iCol {
-  grid-area: iCol;
+	grid-area: iCol;
 }
 
 .nCol {
-  grid-area: nCol;
+	grid-area: nCol;
 }
 
 .gCol {
-  grid-area: gCol;
+	grid-area: gCol;
 }
 
 .oCol {
-  grid-area: oCol;
+	grid-area: oCol;
 }
 
 .bingoCol {
-  border-left: 2px solid rgb(0 0 0 / 31%);
-  position:relative;
+	border-left: 2px solid rgb(0 0 0 / 31%);
+	position:relative;
 }
 
 .helpNav {
-  font-size:0;
-  grid-area: helpNav;
-  margin:0 auto;
-  text-align:center;
-  width:720px;
+	font-size:0;
+	grid-area: helpNav;
+	margin:0 auto;
+	text-align:center;
+	width:720px;
 }
 
 .creditsNav {
-  font-size:0;
-  grid-area: helpNav;
-  margin:0 auto;
-  text-align:center;
-  width:360px;
+	font-size:0;
+	grid-area: helpNav;
+	margin:0 auto;
+	text-align:center;
+	width:360px;
 }
 
 #helpNavLine, #creditsNavLine {
-  border-top:3px solid #000;
-  position:absolute;
-  transition:margin-left 0.5s;
-  width:180px;
+	border-top:3px solid #000;
+	position:absolute;
+	transition:margin-left 0.5s;
+	width:180px;
 }
 
 .helpNavText, .creditsNavText {
-  align-items:center;
-  display:inline-flex;
-  font-size:24px;
-  height:41px;
-  justify-content:center;
-  transition:color 0.15s;
-  width:180px;
+	align-items:center;
+	display:inline-flex;
+	font-size:24px;
+	height:41px;
+	justify-content:center;
+	transition:color 0.15s;
+	width:180px;
 }
 
 .helpNavText:hover, .creditsNavText:hover {
-  color:#16639a;
-  cursor:pointer;
+	color:#16639a;
+	cursor:pointer;
 }
 
 .boldHelp {
-  font-weight:700;
+	font-weight:700;
 }
 
 .boldHelp:hover {
-  color:#000;
+	color:#000;
 }
 
 .helpLine {
-  border-top:2px solid #948a54;
-  grid-area: helpLine;
-  margin:0 auto;
-  width:1100px;
+	border-top:2px solid #948a54;
+	grid-area: helpLine;
+	margin:0 auto;
+	width:1100px;
 }
 
 .helpContent {
-  grid-area: helpContent;
+	grid-area: helpContent;
 }
 
 #howToUseBasics2, #howToUseTipsTricks, #howToUseThanks, #creditsCredits {
-  display:none;
+	display:none;
 }
 
 .helpFooter {
-  grid-area: helpFooter;
-  text-align:center;
+	grid-area: helpFooter;
+	text-align:center;
 }
 
 .helpFooterLabel {
-  color:#376092;
-  cursor:pointer;
-  display:inline-block;
-  margin:0.5em 0;
-  transition:color 0.15s;
+	color:#376092;
+	cursor:pointer;
+	display:inline-block;
+	margin:0.5em 0;
+	transition:color 0.15s;
 }
 
 .helpFooterLabel:hover {
-  color:#4297b7;
+	color:#4297b7;
 }
 
 .helpPointer {
-  background-color: #4b63dc;
-  border-radius:0 3px 3px 0;
-  box-shadow:1px 1px 2.5px rgb(0 0 0 / 60%);
-  height:3px;
-  position:absolute;
+	background-color: #4b63dc;
+	border-radius:0 3px 3px 0;
+	box-shadow:1px 1px 2.5px rgb(0 0 0 / 60%);
+	height:3px;
+	position:absolute;
 }
 
 .textLink {
-  color:#00f;
-  cursor:pointer;
-  text-decoration:underline;
+	color:#00f;
+	cursor:pointer;
+	text-decoration:underline;
 }
 
 .textLink:active {
-  color:#f00;
+	color:#f00;
 }
 
 #howToUse, #goToMasterBoard {
-  cursor:pointer;
-  display:inline-block;
-  margin: 0 0.7em;
-  transition:color 0.15s;
+	cursor:pointer;
+	display:inline-block;
+	margin: 0 0.7em;
+	transition:color 0.15s;
 }
 
 #howToUse:hover, #goToMasterBoard:hover {
-  color:#4297b7;
+	color:#4297b7;
 }
 
 #copyright {
-  font-family: arial, sans-serif;
-  font-size:13.5px;
-  margin-top:-39px;
-  text-align:center;
+	font-family: arial, sans-serif;
+	font-size:13.5px;
+	margin-top:-39px;
+	text-align:center;
 }
 
 #copyrightLabel {
-  color:#000;
-  cursor:pointer;
-  transition:color 0.15s;
+	color:#000;
+	cursor:pointer;
+	transition:color 0.15s;
 }
 
 #copyrightLabel:hover {
-  color:#2d6073;
+	color:#2d6073;
 }
 
 .layer {
-  height:720px;
-  overflow:hidden;
-  pointer-events:none;
-  position:absolute;
-  width:1280px;
+	height:720px;
+	overflow:hidden;
+	pointer-events:none;
+	position:absolute;
+	width:1280px;
 }
 
 #fullScreenToggleLayer {
-  display:none;
-  transition: opacity 0.25s linear;
-  z-index:1000;
+	display:none;
+	transition: opacity 0.25s linear;
+	z-index:1000;
 }
 
 #drawBallLayer {
-  display:none;
-  transition: opacity 0.25s linear;
-  z-index:2;
+	display:none;
+	transition: opacity 0.25s linear;
+	z-index:2;
 }
 
 #drawBallDiv {
 	display: none;
-  left:48px;
-  pointer-events:auto;
-  position:absolute;
-  top:256px;
-  transition:0.1s;
+	left:48px;
+	pointer-events:auto;
+	position:absolute;
+	top:256px;
+	transition:0.1s;
 }
 
 #hex {
-  cursor:pointer;
+	cursor:pointer;
 }
 
 #hex polygon {
-  fill: url("#gradient");
+	fill: url("#gradient");
 }
 
 #hex:hover polygon {
-  fill: rgb(155 145 90 / 80%);
+	fill: rgb(155 145 90 / 80%);
 }
 
 .fullScreenToggleBig {
-  pointer-events:auto;
-  position:absolute;
-  right:25px;
-  top:15px;
+	pointer-events:auto;
+	position:absolute;
+	right:25px;
+	top:15px;
 }
 
 .fullScreenToggleSmall {
-  pointer-events:auto;
-  position:absolute;
-  right:15px;
-  top:5px;
-  transform:scale(0.5);
+	pointer-events:auto;
+	position:absolute;
+	right:15px;
+	top:5px;
+	transform:scale(0.5);
 }
 
 #fullScreenButton, #fullScreenButtonDown {
-  background-repeat:no-repeat;
-  background-size: contain;
-  cursor:pointer;
-  height:30px;
-  width:30px;
+	background-repeat:no-repeat;
+	background-size: contain;
+	cursor:pointer;
+	height:30px;
+	width:30px;
 }
 
 #fullScreenButton {
-  background-image:url("../img/fullscreenUp.svg");
+	background-image:url("../img/fullscreenUp.svg");
 }
 
 #fullScreenButtonDown {
-  background-image:url("../img/fullscreenDown.svg");
-  display:none;
+	background-image:url("../img/fullscreenDown.svg");
+	display:none;
 }
 
 #fullScreenButton:hover {
-  background-image:url("../img/fullscreenUpHover.svg");
+	background-image:url("../img/fullscreenUpHover.svg");
 }
 
 #fullScreenButtonDown:hover {
-  background-image:url("../img/fullscreenDownHover.svg");
+	background-image:url("../img/fullscreenDownHover.svg");
 }
 
 #homeButton {
-  background-image:url("../img/homeButton.svg");
-  background-repeat:no-repeat;
-  background-size: contain;
-  cursor:pointer;
-  display:none;
-  height:30px;
-  transform:scale(0.5);
-  width:30px;
+	background-image:url("../img/homeButton.svg");
+	background-repeat:no-repeat;
+	background-size: contain;
+	cursor:pointer;
+	display:none;
+	height:30px;
+	transform:scale(0.5);
+	width:30px;
 }
 
 #homeButton:hover {
-  background-image:url("../img/homeButtonHover.svg");
+	background-image:url("../img/homeButtonHover.svg");
 }
 
 .homeButtonLabel {
-  pointer-events:auto;
-  position:absolute;
-  right:50px;
-  top:5px;
+	pointer-events:auto;
+	position:absolute;
+	right:50px;
+	top:5px;
 }
 
 .smallMargin {
@@ -440,309 +440,308 @@ margin:0.5em 0;
 }
 
 .bingoLetter {
-  color:#ce181e;
-  font-family: "Open Sans", sans-serif;
-  font-size:110px;
-  font-weight:700;
-  left:50%;
-  line-height:0.8;
-  margin:41px auto 13px;
-  overflow:hidden;
-  position:absolute;
-  text-align:center;
-  transform: translateX(-50%);
-  z-index:2;
+	color:#ce181e;
+	font-family: "Open Sans", sans-serif;
+	font-size:110px;
+	font-weight:700;
+	left:50%;
+	line-height:1;
+	margin: 20px auto 13px;
+	position:absolute;
+	text-align:center;
+	transform: translateX(-50%);
+	z-index:2;
 }
 
 .bingoLetter:hover {
-  color:#e24e53;
-  cursor:pointer;
+	color:#e24e53;
+	cursor:pointer;
 }
 
 .bingoLetterGray {
-  color:#969696;
+	color:#969696;
 }
 
 .bingoLetterGray:hover {
-  color:#808080;
+	color:#808080;
 }
 
 #blocker {
-  background-image: linear-gradient(#c4bd97, #948A54);
-  box-shadow: 5px 0 7px 7px rgb(0 0 0 / 60%);
-  height:720px;
-  left:1287px;
-  margin-top:-720px;
-  position:relative;
-  transition: left 0.5s, opacity 0.3s;
-  width:1280px;
-  z-index:1;
+	background-image: linear-gradient(#c4bd97, #948A54);
+	box-shadow: 5px 0 7px 7px rgb(0 0 0 / 60%);
+	height:720px;
+	left:1287px;
+	margin-top:-720px;
+	position:relative;
+	transition: left 0.5s, opacity 0.3s;
+	width:1280px;
+	z-index:1;
 }
 
 .boardToggle {
-  align-items:center;
-  border-radius: 12px 0;
-  cursor:pointer;
-  display:flex;
-  font-size:14.5px;
-  height:26px;
-  justify-content:center;
-  margin: 26px auto 0;
-  transition:background-color 0.15s;
-  width:115px;
+	align-items:center;
+	border-radius: 12px 0;
+	cursor:pointer;
+	display:flex;
+	font-size:14.5px;
+	height:26px;
+	justify-content:center;
+	margin: 26px auto 0;
+	transition:background-color 0.15s;
+	width:115px;
 }
 
 #hideBoard {
-  background-color:rgb(75 172 198 / 30%);
-  border: 1px solid rgb(49 133 156 / 65%);
+	background-color:rgb(75 172 198 / 30%);
+	border: 1px solid rgb(49 133 156 / 65%);
 }
 
 #hideBoard:hover {
-  background-color:rgb(75 172 198 / 50%);
+	background-color:rgb(75 172 198 / 50%);
 }
 
 #showBoard {
-  background-color:rgb(192 80 77 / 30%);
-  border: 1px solid rgb(192 80 77 / 65%);
+	background-color:rgb(192 80 77 / 30%);
+	border: 1px solid rgb(192 80 77 / 65%);
 }
 
 #showBoard:hover {
-  background-color:rgb(192 80 77 / 50%);
+	background-color:rgb(192 80 77 / 50%);
 }
 
 .smallButton {
-  border-radius:6px;
-  cursor:pointer;
-  font-family:arial,sans-serif;
-  font-size:13px;
-  margin-right:14px;
-  padding: 3px 6px;
-  transition:background-color 0.15s;
+	border-radius:6px;
+	cursor:pointer;
+	font-family:arial,sans-serif;
+	font-size:13px;
+	margin-right:14px;
+	padding: 3px 6px;
+	transition:background-color 0.15s;
 }
 
 #reset:hover {
-  background-color:rgb(255 0 0 / 25%);
+	background-color:rgb(255 0 0 / 25%);
 }
 
 #reset:active {
-  background-color:rgb(255 0 0 / 50%);
+	background-color:rgb(255 0 0 / 50%);
 }
 
 #themes:hover {
-  background-color:rgb(80 80 80 / 25%);
+	background-color:rgb(80 80 80 / 25%);
 }
 
 .bigBingoBallClass {
-  background:#9b9b9b;
-  border:2.5px solid #333;
-  opacity:0.21;
+	background:#9b9b9b;
+	border:2.5px solid #333;
+	opacity:0.21;
 }
 
 #bigBingoBall {
-  border-radius:50%;
-  cursor:pointer;
-  height:186px;
-  margin:0 auto;
-  margin-top:135px;
-  width:186px;
+	border-radius:50%;
+	cursor:pointer;
+	height:186px;
+	margin:0 auto;
+	margin-top:20px;
+	width:186px;
 }
 
 .bigBingoBallClass:hover {
-  opacity:0.35;
+	opacity:0.35;
 }
 
 #bigBingoLetter {
-  font-size:62px;
-  font-weight:700;
-  line-height:1;
-  margin:0 auto;
-  margin-top:12px;
-  text-align:center;
-  width:60px;
+	font-size:62px;
+	font-weight:700;
+	line-height:1;
+	margin:0 auto;
+	margin-top:12px;
+	text-align:center;
+	width:60px;
 }
 
 #bigBingoNumber {
-  align-items:center;
-  display:flex;
-  font-size:95px;
-  font-weight:700;
-  height:110px;
-  justify-content:center;
-  margin:-14px auto 0;
-  text-align:center;
-  transition:font-size 0.1s;
-  width:110px;
+	align-items:center;
+	display:flex;
+	font-size:95px;
+	font-weight:700;
+	height:110px;
+	justify-content:center;
+	margin:-14px auto 0;
+	text-align:center;
+	transition:font-size 0.1s;
+	width:110px;
 }
 
 #ballsDrawnRemaining {
-  align-items:center;
-  background:rgb(179 162 199 / 67%);
-  border:1.2px solid rgb(74 126 187 / 85%);
-  border-radius:12px;
-  display:flex;
-  font-size:25px;
-  height:44px;
-  justify-content:center;
-  margin:9px auto 0;
-  visibility:hidden;
-  width:193px;
+	align-items:center;
+	background:rgb(179 162 199 / 67%);
+	border:1.2px solid rgb(74 126 187 / 85%);
+	border-radius:12px;
+	display:flex;
+	font-size:25px;
+	height:44px;
+	justify-content:center;
+	margin:9px auto 0;
+	visibility:hidden;
+	width:193px;
 }
 
 #ballsDrawn {
-  align-items:center;
-  display:none;
-  justify-content:center;
+	align-items:center;
+	display:none;
+	justify-content:center;
 }
 
 #ballsRemaining {
-  align-items:center;
-  display:none;
-  justify-content:center;
+	align-items:center;
+	display:none;
+	justify-content:center;
 }
 
 #bingoB, #bingoI, #bingoN, #bingoG, #bingoO {
-  margin-top:-10px;
+	margin-top:-10px;
 }
 
 .bingoBalls {
-  margin-top:132px;
-  text-align:center;
-  transition:opacity 0.3s;
+	margin-top:132px;
+	text-align:center;
+	transition:opacity 0.3s;
 }
 
 .bingoBallBall {
-  align-items:center;
-  background:#9b9b9b;
-  border-color:#333;
-  border-radius: 50%;
-  border-style: solid;
-  border-width: 1px;
-  color:#000;
-  cursor:pointer;
-  display:inline-flex;
-  font-size:38px;
-  height:61px;
-  justify-content:center;
-  margin:4px 10px;
-  opacity:0.21;
-  width:61px;
+	align-items:center;
+	background:#9b9b9b;
+	border-color:#333;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	color:#000;
+	cursor:pointer;
+	display:inline-flex;
+	font-size:38px;
+	height:61px;
+	justify-content:center;
+	margin:4px 10px;
+	opacity:0.21;
+	width:61px;
 }
 
 .bingoBallBall:hover {
-  opacity:0.54;
+	opacity:0.54;
 }
 
 .bingoBallBallActiveB {
-  background:radial-gradient(circle at 31.5px 12px, rgb(247 182 128 / 85%), rgb(228 108 10 / 85%));
-  border-color:rgb(228 108 10);
-  color:#6b3205;
+	background:radial-gradient(circle at 31.5px 12px, rgb(247 182 128 / 85%), rgb(228 108 10 / 85%));
+	border-color:rgb(228 108 10);
+	color:#6b3205;
 font-weight:700;
-  opacity:1;
+	opacity:1;
 }
 
 .bingoBallBallActiveI {
-  background:radial-gradient(circle at 31.5px 12px, rgb(176 204 120 / 85%), rgb(135 170 63 / 85%));
-  border-color:rgb(119 147 60);
-  color:#3e4f1f;
-  font-weight:700;
-  opacity:1;
+	background:radial-gradient(circle at 31.5px 12px, rgb(176 204 120 / 85%), rgb(135 170 63 / 85%));
+	border-color:rgb(119 147 60);
+	color:#3e4f1f;
+	font-weight:700;
+	opacity:1;
 }
 
 .bingoBallBallActiveN {
-  background:radial-gradient(circle at 31.5px 12px, rgb(108 201 226 / 85%), rgb(84 165 188 / 85%));
-  border-color:rgb(49 133 156);
-  color:#194551;
-  font-weight:700;
-  opacity:1;
+	background:radial-gradient(circle at 31.5px 12px, rgb(108 201 226 / 85%), rgb(84 165 188 / 85%));
+	border-color:rgb(49 133 156);
+	color:#194551;
+	font-weight:700;
+	opacity:1;
 }
 
 .bingoBallBallActiveG {
-  background:radial-gradient(circle at 31.5px 12px, rgb(195 164 234 / 85%), rgb(159 129 193 / 85%));
-  border-color:rgb(96 74 123);
-  color:#352944;
-  font-weight:700;
-  opacity:1;
+	background:radial-gradient(circle at 31.5px 12px, rgb(195 164 234 / 85%), rgb(159 129 193 / 85%));
+	border-color:rgb(96 74 123);
+	color:#352944;
+	font-weight:700;
+	opacity:1;
 }
 
 .bingoBallBallActiveO {
-  background:radial-gradient(circle at 31.5px 12px, rgb(255 138 135 / 85%), rgb(221 98 95 / 85%));
-  border-color:rgb(149 55 53);
-  color:#5e2221;
-  font-weight:700;
-  opacity:1;
+	background:radial-gradient(circle at 31.5px 12px, rgb(255 138 135 / 85%), rgb(221 98 95 / 85%));
+	border-color:rgb(149 55 53);
+	color:#5e2221;
+	font-weight:700;
+	opacity:1;
 }
 
 .bingoBallBallActiveB:hover, .bingoBallBallActiveI:hover, .bingoBallBallActiveN:hover, .bingoBallBallActiveG:hover, .bingoBallBallActiveO:hover {
-  opacity:0.8;
+	opacity:0.8;
 }
 
 .bingoBallVintage {
-  align-items:center;
-  color:#000;
-  cursor:pointer;
-  display:inline-flex;
-  font-size:52px;
-  height:61px;
-  justify-content:center;
-  margin:4.5px 10px;
-  opacity:0.17;
-  width:61px;
+	align-items:center;
+	color:#000;
+	cursor:pointer;
+	display:inline-flex;
+	font-size:52px;
+	height:61px;
+	justify-content:center;
+	margin:4.5px 10px;
+	opacity:0.17;
+	width:61px;
 }
 
 .bingoBallVintage:hover {
-  opacity:0.54;
+	opacity:0.54;
 }
 
 .bingoBallVintageActive {
-  font-weight:700;
-  opacity:1;
+	font-weight:700;
+	opacity:1;
 }
 
 .bingoBallVintageActive:hover {
-  opacity:0.75;
+	opacity:0.75;
 }
 
 .bigBingoBallVintage {
-  background:rgb(155 155 155 / 50%);
-  font-weight:700;
-  opacity:1;
+	background:rgb(155 155 155 / 50%);
+	font-weight:700;
+	opacity:1;
 }
 
 .bigBingoBallVintage:hover {
-  opacity:0.75;
+	opacity:0.75;
 }
 
 #bingoStyleBall {
-  border-radius:12px;
-  cursor:pointer;
-  transition: background-color 0.15s;
+	border-radius:12px;
+	cursor:pointer;
+	transition: background-color 0.15s;
 }
 
 #bingoStyleBall:hover {
-  background-color:rgb(0 0 0 / 5%);
+	background-color:rgb(0 0 0 / 5%);
 }
 
 #bingoStyleBall:hover .bingoBallBall {
-  opacity:1;
+	opacity:1;
 }
 
 #bingoStyleVintage {
-  border-radius:12px;
-  cursor:pointer;
-  transition: background-color 0.15s;
+	border-radius:12px;
+	cursor:pointer;
+	transition: background-color 0.15s;
 }
 
 #bingoStyleVintage:hover {
-  background-color:rgb(0 0 0 / 5%);
+	background-color:rgb(0 0 0 / 5%);
 }
 
 #bingoStyleVintage:hover .bingoBallVintage {
-  opacity:1;
+	opacity:1;
 }
 
 .themeSelection {
-  font-size:38px;
-  font-weight:700;
+	font-size:38px;
+	font-weight:700;
 }
 
 .themeSelection span {
@@ -758,146 +757,146 @@ font-weight:700;
 }
 
 .themeColor {
-  border-radius:12px;
-  cursor:pointer;
-  padding:3px 12px;
-  transition: background-color 0.15s;
+	border-radius:12px;
+	cursor:pointer;
+	padding:3px 12px;
+	transition: background-color 0.15s;
 }
 
 .themeColor:hover {
-  background-color:rgb(0 0 0 / 5%);
+	background-color:rgb(0 0 0 / 5%);
 }
 
 #classic {
-  color:rgb(148 138 84);
+	color:rgb(148 138 84);
 }
 
 #red {
-  color:rgb(255 0 0);
+	color:rgb(255 0 0);
 }
 
 #green {
-  color:rgb(0 128 0);
+	color:rgb(0 128 0);
 }
 
 #blue {
-  color:rgb(51 102 255);
+	color:rgb(51 102 255);
 }
 
 #purple {
-  color:rgb(164 70 153);
+	color:rgb(164 70 153);
 }
 
 .chromeBingoLetterFix {
-  transform:translateX(-50%) translateZ(0);
+	transform:translateX(-50%) translateZ(0);
 }
 
 .winningPatternDiv {
-  align-items:center;
-  background:rgb(0 0 0 / 0%);
-  display:flex;
-  flex-direction:column;
-  height:201px;
-  justify-content:center;
-  margin:0 auto;
-  margin-top:14px;
-  width:90%;
+	align-items:center;
+	background:rgb(0 0 0 / 0%);
+	display:flex;
+	flex-direction:column;
+	height:300px;
+	justify-content:center;
+	margin:0 auto;
+	margin-top:14px;
+	width:90%;
 }
 
 .bingoCard {
-  border:1px solid #7f7f7f;
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  height:180px;
-  width:150px;
+	border:1px solid #7f7f7f;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	height:260px;
+	width:220px;
 }
 
 .bingoCard:hover {
-  cursor:pointer;
-  opacity:0.75;
+	cursor:pointer;
+	opacity:0.75;
 }
 
 .bigBingoCard {
-  border:1px solid #7f7f7f;
-  box-shadow:4px 4px 12px #777;
-  display:grid;
-  font-size:70px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  height:420px;
-  margin-right:40px;
-  width:350px;
+	border:1px solid #7f7f7f;
+	box-shadow:4px 4px 12px #777;
+	display:grid;
+	font-size:70px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	height:420px;
+	margin-right:40px;
+	width:350px;
 }
 
 .bingoCardBody {
-  background-color:#f2f2f2;
-  border:1px solid #7f7f7f;
+	background-color:#f2f2f2;
+	border:1px solid #7f7f7f;
 }
 
 .bingoCardHeader {
-  align-items:center;
-  background:#e1cdac;
-  border:1px solid #7f7f7f;
-  color:#ce181e;
-  display:flex;
-  font-family: "Open Sans", sans-serif;
-  font-size:80%;
-  font-weight:700;
-  justify-content:center;
-  line-height:0.6;
-  text-align:center;
+	align-items:center;
+	background:#e1cdac;
+	border:1px solid #7f7f7f;
+	color:#ce181e;
+	display:flex;
+	font-family: "Open Sans", sans-serif;
+	font-size:80%;
+	font-weight:700;
+	justify-content:center;
+	line-height:0.6;
+	text-align:center;
 }
 
 .winningPatternNames {
-  display:grid;
-  font-size:27px;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  height:380px;
-  width:600px;
+	display:grid;
+	font-size:27px;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	height:380px;
+	width:600px;
 }
 
 .winningPatternNames div {
-  align-items:center;
-  display:flex;
-  justify-content:center;
+	align-items:center;
+	display:flex;
+	justify-content:center;
 }
 
 .cardExplanation {
-  align-items:center;
-  display:flex;
-  font-size:20px;
-  font-style:italic;
-  height:70px;
-  justify-content:center;
+	align-items:center;
+	display:flex;
+	font-size:20px;
+	font-style:italic;
+	height:70px;
+	justify-content:center;
 }
 
 .winningName, .bigBingoCardBody {
-  transition: color 0.15s, background-color 0.2s;
+	transition: color 0.15s, background-color 0.2s;
 }
 
 .winningName:hover {
-  color:#16639a;
-  cursor:pointer;
+	color:#16639a;
+	cursor:pointer;
 }
 
 .bigBingoCardBody:hover {
-  background-color:#ddd;
-  cursor:pointer;
+	background-color:#ddd;
+	cursor:pointer;
 }
 
 .bingoCardActive, .bingoCardActive2 {
-  background-color:#e83b29;
+	background-color:#e83b29;
 }
 
 .bingoCardActive:hover {
-  background-color:#f14b3a;
+	background-color:#f14b3a;
 }
 
 .twoSections {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  height:100%;
-  width:1000px;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	height:100%;
+	width:1000px;
 }
