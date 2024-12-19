@@ -1,98 +1,99 @@
 @font-face {
-  font-family: 'Caladea';
-  src: url('../fonts/caladea-italic.ttf') format('truetype');
-  font-weight: normal;
+  font-family: Caladea;
   font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/caladea-italic.ttf') format('truetype');
   }
+
 @font-face {
-  font-family: 'Arya';
+  font-family: Arya;
   font-style: normal;
   font-weight: 700;
   src: local('Arya Bold'), local('Arya-Bold'),
-     url('../fonts/arya-v3-latin-700.woff2') format('woff2'),
-     url('../fonts/arya-v3-latin-700.woff') format('woff');
+	 url('../fonts/arya-v3-latin-700.woff2') format('woff2'),
+	 url('../fonts/arya-v3-latin-700.woff') format('woff');
 }
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans Regular'), local('OpenSans-Regular'),
-     url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'),
-     url('../fonts/open-sans-v15-latin-regular.woff') format('woff');
+	 url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'),
+	 url('../fonts/open-sans-v15-latin-regular.woff') format('woff');
 }
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: italic;
   font-weight: 400;
   src: local('Open Sans Italic'), local('OpenSans-Italic'),
-     url('../fonts/open-sans-v15-latin-italic.woff2') format('woff2'),
-     url('../fonts/open-sans-v15-latin-italic.woff') format('woff');
+	 url('../fonts/open-sans-v15-latin-italic.woff2') format('woff2'),
+	 url('../fonts/open-sans-v15-latin-italic.woff') format('woff');
 }
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   src: local('Open Sans Bold'), local('OpenSans-Bold'),
-     url('../fonts/open-sans-v15-latin-700.woff2') format('woff2'),
-     url('../fonts/open-sans-v15-latin-700.woff') format('woff');
+	 url('../fonts/open-sans-v15-latin-700.woff2') format('woff2'),
+	 url('../fonts/open-sans-v15-latin-700.woff') format('woff');
 }
 
 html {
   height:100%;
   margin: 0;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 * {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   touch-action: manipulation;
+  -webkit-touch-callout: none; /* iOS Safari */ /* Safari */
+  user-select: none;
 }
 
 body {
-  padding:0;
-  background: #000;
-  margin:0;
-  display: flex;
   align-items:center;
-  justify-content:center;
+  background: #000;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
   height:100%;
-  width:100%;
-  font-family:"open sans";
+  justify-content:center;
+  margin:0;
   overflow:hidden;
+  padding:0;
   position:fixed;
+  width:100%;
 }
 
 .noscript {
-  position:absolute;
   display:flex;
+  font-size:36px;
+  position:absolute;
   text-align:center;
   z-index:9999;
-  font-size:36px;
 }
 
 #area {
-  flex-shrink: 0;
   background: radial-gradient(#f7eaab, #bfbb73);
+  flex-shrink: 0;
+  font-size:30px;
   height:720px;
   width:1280px;
-  font-size:30px;
 }
 
 #fader {
-  position:absolute;
-  z-index:999;
-  flex-shrink: 0;
   background: radial-gradient(#f7eaab, #bfbb73);
+  flex-shrink: 0;
   height:720px;
-  width:1280px;
-  overflow:hidden;
-  transition: opacity 0.25s linear;
-  pointer-events: none;
   opacity:1;
+  overflow:hidden;
+  pointer-events: none;
+  position:absolute;
+  transition: opacity 0.25s linear;
+  width:1280px;
+  z-index:999;
 }
 
 .notransition {
@@ -100,56 +101,50 @@ body {
 }
 
 #title {
-  position:relative;
-  font-size:135px;
-  font-family:arya;
-  font-weight:700;
   color:#ce181e;
-  text-align:center;
+  font-family: arya, sans-serif;
+  font-size:135px;
+  font-weight:700;
   line-height:1.2;
+  position:relative;
+  text-align:center;
 }
 
 #subheading {
-  line-height:1.2;
-  font-size:66px;
-  font-family:caladea;
-  font-style:italic;
   color:#948a54;
-  text-align:center;
+  font-family: caladea, serif;
+  font-size:66px;
+  font-style:italic;
+  line-height:1.2;
   margin-bottom:1.3em;
+  text-align:center;
 }
 
 #titleSelection {
-  font-size:50px;
   color:#376092;
-  text-align:center;
+  font-size:50px;
   margin-bottom:2.5em;
+  text-align:center;
 }
 
 .flexCenter {
-  display:flex;
   align-items:center;
-  justify-content:center;
+  display:flex;
   height:100%;
+  justify-content:center;
 }
 
 #titleSlide {
-  height:100%;
   background-image:url("../img/bingoRoller.svg");
-  background-size: contain;
   background-repeat:no-repeat;
+  background-size: contain;
+  height:100%;
 }
 
 #howToUseSlide, #aboutCreditsSlide {
   display:none;
+  grid-template: "helpHeader" 96px "helpNav" 44px "helpLine" 2px "helpContent" 1fr "helpFooter" 77px / 100%;
   height:100%;
-  grid-template-columns:100%;
-  grid-template-rows: 96px 44px 2px 1fr 77px;
-  grid-template-areas: "helpHeader"
-                "helpNav"
-                "helpLine"
-                "helpContent"
-                "helpFooter";
 }
 
 #onboardingSlide {
@@ -159,39 +154,29 @@ body {
 
 #masterBoardSlide {
   display:none;
+  grid-template: "controlsCol  bCol  iCol  nCol  gCol  oCol" 100% / 255px 1fr 1fr 1fr 1fr 1fr;
   height:100%;
-  grid-template-columns:255px 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100%;
-  grid-template-areas: "controlsCol  bCol  iCol  nCol  gCol  oCol";
   overflow:hidden;
 }
 
 #settingsSlide {
   display:none;
+  grid-template: "helpHeader" 96px "helpContent" 1fr "helpFooter" 77px / 100%;
   height:100%;
-  grid-template-columns:100%;
-  grid-template-rows: 96px 1fr 77px;
-  grid-template-areas: "helpHeader"
-                      "helpContent"
-                      "helpFooter";
 }
 
 #winningPatternSlide {
   display:none;
+  grid-template: "helpHeader" 96px "helpContent" 1fr "helpFooter" 77px / 100%;
   height:100%;
-  grid-template-columns:100%;
-  grid-template-rows: 96px 1fr 77px;
-  grid-template-areas: "helpHeader"
-                      "helpContent"
-                      "helpFooter";
 }
 
 h2 {
   font-size:36px;
   font-weight:300;
-  text-align:center;
-  margin:22px 0;
   grid-area: helpHeader;
+  margin:22px 0;
+  text-align:center;
 }
 
 .controlsCol {
@@ -219,46 +204,46 @@ h2 {
 }
 
 .bingoCol {
-  border-left: 2px solid rgba(0,0,0,0.31);
+  border-left: 2px solid rgb(0 0 0 / 31%);
   position:relative;
 }
 
 .helpNav {
-  grid-area: helpNav;
   font-size:0;
-  width:720px;
+  grid-area: helpNav;
   margin:0 auto;
   text-align:center;
+  width:720px;
 }
 
 .creditsNav {
-  grid-area: helpNav;
   font-size:0;
-  width:360px;
+  grid-area: helpNav;
   margin:0 auto;
   text-align:center;
+  width:360px;
 }
 
 #helpNavLine, #creditsNavLine {
-  border-top:3px solid black;
-  width:180px;
+  border-top:3px solid #000;
   position:absolute;
   transition:margin-left 0.5s;
+  width:180px;
 }
 
 .helpNavText, .creditsNavText {
-  height:41px;
-  width:180px;
-  font-size:24px;
-  display:inline-flex;
   align-items:center;
+  display:inline-flex;
+  font-size:24px;
+  height:41px;
   justify-content:center;
   transition:color 0.15s;
+  width:180px;
 }
 
 .helpNavText:hover, .creditsNavText:hover {
-  cursor:pointer;
   color:#16639a;
+  cursor:pointer;
 }
 
 .boldHelp {
@@ -270,10 +255,10 @@ h2 {
 }
 
 .helpLine {
-  grid-area: helpLine;
   border-top:2px solid #948a54;
-  width:1100px;
+  grid-area: helpLine;
   margin:0 auto;
+  width:1100px;
 }
 
 .helpContent {
@@ -290,11 +275,11 @@ h2 {
 }
 
 .helpFooterLabel {
-  display:inline-block;
-  cursor:pointer;
   color:#376092;
-  transition:color 0.15s;
+  cursor:pointer;
+  display:inline-block;
   margin:0.5em 0;
+  transition:color 0.15s;
 }
 
 .helpFooterLabel:hover {
@@ -302,27 +287,27 @@ h2 {
 }
 
 .helpPointer {
-  position:absolute;
   background-color: #4b63dc;
-  height:3px;
-  box-shadow:1px 1px 2.5px rgba(0,0,0,0.6);
   border-radius:0 3px 3px 0;
+  box-shadow:1px 1px 2.5px rgb(0 0 0 / 60%);
+  height:3px;
+  position:absolute;
 }
 
 .textLink {
-  text-decoration:underline;
+  color:#00f;
   cursor:pointer;
-  color:blue;
+  text-decoration:underline;
 }
 
 .textLink:active {
-  color:red;
+  color:#f00;
 }
 
 #howToUse, #goToMasterBoard {
+  cursor:pointer;
   display:inline-block;
   margin: 0 0.7em;
-  cursor:pointer;
   transition:color 0.15s;
 }
 
@@ -331,15 +316,15 @@ h2 {
 }
 
 #copyright {
-  text-align:center;
-  margin-top:-39px;
+  font-family: arial, sans-serif;
   font-size:13.5px;
-  font-family:arial;
+  margin-top:-39px;
+  text-align:center;
 }
 
 #copyrightLabel {
-  cursor:pointer;
   color:#000;
+  cursor:pointer;
   transition:color 0.15s;
 }
 
@@ -348,30 +333,31 @@ h2 {
 }
 
 .layer {
-  position:absolute;
-  width:1280px;
   height:720px;
   overflow:hidden;
   pointer-events:none;
+  position:absolute;
+  width:1280px;
 }
 
 #fullScreenToggleLayer {
-  z-index:1000;
   display:none;
   transition: opacity 0.25s linear;
+  z-index:1000;
 }
 
 #drawBallLayer {
-  z-index:2;
   display:none;
   transition: opacity 0.25s linear;
+  z-index:2;
 }
 
 #drawBallDiv {
-  position:absolute;
-  top:256px;
+	display: none;
   left:48px;
   pointer-events:auto;
+  position:absolute;
+  top:256px;
   transition:0.1s;
 }
 
@@ -380,34 +366,34 @@ h2 {
 }
 
 #hex polygon {
-  fill: url(#gradient);
+  fill: url("#gradient");
 }
 
 #hex:hover polygon {
-  fill: rgba(155, 145, 90, 0.8);
+  fill: rgb(155 145 90 / 80%);
 }
 
 .fullScreenToggleBig {
-  position:absolute;
   pointer-events:auto;
+  position:absolute;
   right:25px;
   top:15px;
 }
 
 .fullScreenToggleSmall {
-  position:absolute;
   pointer-events:auto;
+  position:absolute;
   right:15px;
   top:5px;
   transform:scale(0.5);
 }
 
 #fullScreenButton, #fullScreenButtonDown {
-  width:30px;
-  height:30px;
-  background-size: contain;
   background-repeat:no-repeat;
+  background-size: contain;
   cursor:pointer;
+  height:30px;
+  width:30px;
 }
 
 #fullScreenButton {
@@ -415,8 +401,8 @@ h2 {
 }
 
 #fullScreenButtonDown {
-  display:none;
   background-image:url("../img/fullscreenDown.svg");
+  display:none;
 }
 
 #fullScreenButton:hover {
@@ -428,14 +414,14 @@ h2 {
 }
 
 #homeButton {
-  width:30px;
-  height:30px;
-  background-size: contain;
-  background-repeat:no-repeat;
-  cursor:pointer;
-  transform:scale(0.5);
   background-image:url("../img/homeButton.svg");
+  background-repeat:no-repeat;
+  background-size: contain;
+  cursor:pointer;
   display:none;
+  height:30px;
+  transform:scale(0.5);
+  width:30px;
 }
 
 #homeButton:hover {
@@ -443,8 +429,8 @@ h2 {
 }
 
 .homeButtonLabel {
-  position:absolute;
   pointer-events:auto;
+  position:absolute;
   right:50px;
   top:5px;
 }
@@ -454,23 +440,23 @@ margin:0.5em 0;
 }
 
 .bingoLetter {
-  font-family:arya;
-  font-weight:700;
   color:#ce181e;
+  font-family: "Open Sans", sans-serif;
   font-size:110px;
-  text-align:center;
-  line-height:0.8;
+  font-weight:700;
   left:50%;
-  transform: translateX(-50%);
-  margin:41px auto 13px auto;
+  line-height:0.8;
+  margin:41px auto 13px;
   overflow:hidden;
-  z-index:2;
   position:absolute;
+  text-align:center;
+  transform: translateX(-50%);
+  z-index:2;
 }
 
 .bingoLetter:hover {
-  cursor:pointer;
   color:#e24e53;
+  cursor:pointer;
 }
 
 .bingoLetterGray {
@@ -482,68 +468,68 @@ margin:0.5em 0;
 }
 
 #blocker {
-  position:relative;
-  width:1280px;
-  height:720px;
-  margin-top:-720px;
   background-image: linear-gradient(#c4bd97, #948A54);
-  z-index:1;
+  box-shadow: 5px 0 7px 7px rgb(0 0 0 / 60%);
+  height:720px;
   left:1287px;
-  box-shadow: 5px 0 7px 7px rgba(0,0,0,0.6);
+  margin-top:-720px;
+  position:relative;
   transition: left 0.5s, opacity 0.3s;
+  width:1280px;
+  z-index:1;
 }
 
 .boardToggle {
-  width:115px;
-  height:26px;
-  display:flex;
-  justify-content:center;
   align-items:center;
-  font-size:14.5px;
-  margin: 26px auto 0 auto;
+  border-radius: 12px 0;
   cursor:pointer;
-  border-radius: 12px 0 12px 0;
+  display:flex;
+  font-size:14.5px;
+  height:26px;
+  justify-content:center;
+  margin: 26px auto 0;
   transition:background-color 0.15s;
+  width:115px;
 }
 
 #hideBoard {
-  background-color:rgba(75,172,198,0.3);
-  border: 1px solid rgba(49,133,156,0.65);
+  background-color:rgb(75 172 198 / 30%);
+  border: 1px solid rgb(49 133 156 / 65%);
 }
 
 #hideBoard:hover {
-  background-color:rgba(75,172,198,0.5);
+  background-color:rgb(75 172 198 / 50%);
 }
 
 #showBoard {
-  background-color:rgba(192,80,77,0.3);
-  border: 1px solid rgba(192,80,77,0.65);
+  background-color:rgb(192 80 77 / 30%);
+  border: 1px solid rgb(192 80 77 / 65%);
 }
 
 #showBoard:hover {
-  background-color:rgba(192,80,77,0.5);
+  background-color:rgb(192 80 77 / 50%);
 }
 
 .smallButton {
-  font-size:13px;
-  font-family:arial,sans-serif;
-  cursor:pointer;
-  padding: 3px 6px;
   border-radius:6px;
-  transition:background-color 0.15s;
+  cursor:pointer;
+  font-family:arial,sans-serif;
+  font-size:13px;
   margin-right:14px;
+  padding: 3px 6px;
+  transition:background-color 0.15s;
 }
 
 #reset:hover {
-  background-color:rgba(255,0,0,0.25);
+  background-color:rgb(255 0 0 / 25%);
 }
 
 #reset:active {
-  background-color:rgba(255,0,0,0.5);
+  background-color:rgb(255 0 0 / 50%);
 }
 
 #themes:hover {
-  background-color:rgba(80,80,80,0.25);
+  background-color:rgb(80 80 80 / 25%);
 }
 
 .bigBingoBallClass {
@@ -554,11 +540,11 @@ margin:0.5em 0;
 
 #bigBingoBall {
   border-radius:50%;
-  width:186px;
+  cursor:pointer;
   height:186px;
   margin:0 auto;
   margin-top:135px;
-  cursor:pointer;
+  width:186px;
 }
 
 .bigBingoBallClass:hover {
@@ -568,49 +554,49 @@ margin:0.5em 0;
 #bigBingoLetter {
   font-size:62px;
   font-weight:700;
+  line-height:1;
+  margin:0 auto;
+  margin-top:12px;
   text-align:center;
   width:60px;
-  margin:0 auto;
-  line-height:1;
-  margin-top:12px;
 }
 
 #bigBingoNumber {
+  align-items:center;
+  display:flex;
   font-size:95px;
   font-weight:700;
-  text-align:center;
-  width:110px;
   height:110px;
-  margin:-14px auto 0 auto;
-  display:flex;
-  align-items:center;
   justify-content:center;
+  margin:-14px auto 0;
+  text-align:center;
   transition:font-size 0.1s;
+  width:110px;
 }
 
 #ballsDrawnRemaining {
-  width:193px;
-  height:44px;
-  font-size:25px;
-  background:rgba(179,162,199,0.67);
-  border:1.2px solid rgba(74,126,187,0.85);
-  border-radius:12px;
-  margin:9px auto 0 auto;
-  display:flex;
   align-items:center;
+  background:rgb(179 162 199 / 67%);
+  border:1.2px solid rgb(74 126 187 / 85%);
+  border-radius:12px;
+  display:flex;
+  font-size:25px;
+  height:44px;
   justify-content:center;
+  margin:9px auto 0;
   visibility:hidden;
+  width:193px;
 }
 
 #ballsDrawn {
-  display:none;
   align-items:center;
+  display:none;
   justify-content:center;
 }
 
 #ballsRemaining {
-  display:none;
   align-items:center;
+  display:none;
   justify-content:center;
 }
 
@@ -619,27 +605,27 @@ margin:0.5em 0;
 }
 
 .bingoBalls {
-  text-align:center;
   margin-top:132px;
+  text-align:center;
   transition:opacity 0.3s;
 }
 
 .bingoBallBall {
-  display:inline-flex;
   align-items:center;
-  justify-content:center;
-  border-radius: 50%;
-  width:61px;
-  height:61px;
   background:#9b9b9b;
-  margin:4px 10px;
-  font-size:38px;
-  cursor:pointer;
+  border-color:#333;
+  border-radius: 50%;
   border-style: solid;
   border-width: 1px;
-  border-color:#333;
   color:#000;
+  cursor:pointer;
+  display:inline-flex;
+  font-size:38px;
+  height:61px;
+  justify-content:center;
+  margin:4px 10px;
   opacity:0.21;
+  width:61px;
 }
 
 .bingoBallBall:hover {
@@ -647,43 +633,43 @@ margin:0.5em 0;
 }
 
 .bingoBallBallActiveB {
-  border-color:rgb(228,108,10);
+  background:radial-gradient(circle at 31.5px 12px, rgb(247 182 128 / 85%), rgb(228 108 10 / 85%));
+  border-color:rgb(228 108 10);
   color:#6b3205;
-  opacity:1;
 font-weight:700;
-  background:radial-gradient(circle at 31.5px 12px, rgba(247, 182, 128,0.85), rgba(228,108,10,0.85));
+  opacity:1;
 }
 
 .bingoBallBallActiveI {
-  border-color:rgb(119,147,60);
+  background:radial-gradient(circle at 31.5px 12px, rgb(176 204 120 / 85%), rgb(135 170 63 / 85%));
+  border-color:rgb(119 147 60);
   color:#3e4f1f;
-  opacity:1;
   font-weight:700;
-  background:radial-gradient(circle at 31.5px 12px, rgba(176, 204, 120,0.85), rgba(135, 170, 63,0.85));
+  opacity:1;
 }
 
 .bingoBallBallActiveN {
-  border-color:rgb(49,133,156);
+  background:radial-gradient(circle at 31.5px 12px, rgb(108 201 226 / 85%), rgb(84 165 188 / 85%));
+  border-color:rgb(49 133 156);
   color:#194551;
-  opacity:1;
   font-weight:700;
-  background:radial-gradient(circle at 31.5px 12px, rgba(108, 201, 226,0.85), rgba(84, 165, 188,0.85));
+  opacity:1;
 }
 
 .bingoBallBallActiveG {
-  border-color:rgb(96,74,123);
+  background:radial-gradient(circle at 31.5px 12px, rgb(195 164 234 / 85%), rgb(159 129 193 / 85%));
+  border-color:rgb(96 74 123);
   color:#352944;
-  opacity:1;
   font-weight:700;
-  background:radial-gradient(circle at 31.5px 12px, rgba(195, 164, 234,0.85), rgba(159, 129, 193,0.85));
+  opacity:1;
 }
 
 .bingoBallBallActiveO {
-  border-color:rgb(149,55,53);
+  background:radial-gradient(circle at 31.5px 12px, rgb(255 138 135 / 85%), rgb(221 98 95 / 85%));
+  border-color:rgb(149 55 53);
   color:#5e2221;
-  opacity:1;
   font-weight:700;
-  background:radial-gradient(circle at 31.5px 12px, rgba(255, 138, 135,0.85), rgba(221, 98, 95,0.85));
+  opacity:1;
 }
 
 .bingoBallBallActiveB:hover, .bingoBallBallActiveI:hover, .bingoBallBallActiveN:hover, .bingoBallBallActiveG:hover, .bingoBallBallActiveO:hover {
@@ -691,17 +677,16 @@ font-weight:700;
 }
 
 .bingoBallVintage {
-  display:inline-flex;
   align-items:center;
-  justify-content:center;
-  width:61px;
-  height:61px;
-color:gray;
-  margin:4.5px 10px;
-  font-size:52px;
-  cursor:pointer;
   color:#000;
+  cursor:pointer;
+  display:inline-flex;
+  font-size:52px;
+  height:61px;
+  justify-content:center;
+  margin:4.5px 10px;
   opacity:0.17;
+  width:61px;
 }
 
 .bingoBallVintage:hover {
@@ -709,8 +694,8 @@ color:gray;
 }
 
 .bingoBallVintageActive {
-  opacity:1;
   font-weight:700;
+  opacity:1;
 }
 
 .bingoBallVintageActive:hover {
@@ -718,9 +703,9 @@ color:gray;
 }
 
 .bigBingoBallVintage {
-  opacity:1;
+  background:rgb(155 155 155 / 50%);
   font-weight:700;
-  background:rgba(155, 155, 155,0.5);
+  opacity:1;
 }
 
 .bigBingoBallVintage:hover {
@@ -729,12 +714,12 @@ color:gray;
 
 #bingoStyleBall {
   border-radius:12px;
-  transition: background-color 0.15s;
   cursor:pointer;
+  transition: background-color 0.15s;
 }
 
 #bingoStyleBall:hover {
-  background-color:rgba(0,0,0,0.05);
+  background-color:rgb(0 0 0 / 5%);
 }
 
 #bingoStyleBall:hover .bingoBallBall {
@@ -743,12 +728,12 @@ color:gray;
 
 #bingoStyleVintage {
   border-radius:12px;
-  transition: background-color 0.15s;
   cursor:pointer;
+  transition: background-color 0.15s;
 }
 
 #bingoStyleVintage:hover {
-  background-color:rgba(0,0,0,0.05);
+  background-color:rgb(0 0 0 / 5%);
 }
 
 #bingoStyleVintage:hover .bingoBallVintage {
@@ -761,46 +746,46 @@ color:gray;
 }
 
 .themeSelection span {
-    margin: 0 24px;
+	margin: 0 24px;
 }
 
 .themeSelection span:first-of-type {
-    margin-left: 0;
+	margin-left: 0;
 }
 
 .themeSelection span:last-of-type {
-    margin-right: 0;
+	margin-right: 0;
 }
 
 .themeColor {
-  padding:3px 12px;
   border-radius:12px;
-  transition: background-color 0.15s;
   cursor:pointer;
+  padding:3px 12px;
+  transition: background-color 0.15s;
 }
 
 .themeColor:hover {
-  background-color:rgba(0,0,0,0.05);
+  background-color:rgb(0 0 0 / 5%);
 }
 
 #classic {
-  color:rgb(148,138,84);
+  color:rgb(148 138 84);
 }
 
 #red {
-  color:rgb(255,0,0);
+  color:rgb(255 0 0);
 }
 
 #green {
-  color:rgb(0,128,0);
+  color:rgb(0 128 0);
 }
 
 #blue {
-  color:rgb(51,102,255);
+  color:rgb(51 102 255);
 }
 
 #purple {
-  color:rgb(164,70,153);
+  color:rgb(164 70 153);
 }
 
 .chromeBingoLetterFix {
@@ -808,24 +793,24 @@ color:gray;
 }
 
 .winningPatternDiv {
-  width:90%;
+  align-items:center;
+  background:rgb(0 0 0 / 0%);
+  display:flex;
+  flex-direction:column;
   height:201px;
-  background:rgba(0,0,0,0);
+  justify-content:center;
   margin:0 auto;
   margin-top:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
+  width:90%;
 }
 
 .bingoCard {
+  border:1px solid #7f7f7f;
   display:grid;
-  height:180px;
-  width:150px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  border:1px solid #7f7f7f;
+  height:180px;
+  width:150px;
 }
 
 .bingoCard:hover {
@@ -834,15 +819,15 @@ color:gray;
 }
 
 .bigBingoCard {
+  border:1px solid #7f7f7f;
+  box-shadow:4px 4px 12px #777;
   display:grid;
+  font-size:70px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  border:1px solid #7f7f7f;
   height:420px;
-  width:350px;
-  font-size:70px;
-  box-shadow:4px 4px 12px #777;
   margin-right:40px;
+  width:350px;
 }
 
 .bingoCardBody {
@@ -851,41 +836,41 @@ color:gray;
 }
 
 .bingoCardHeader {
+  align-items:center;
   background:#e1cdac;
   border:1px solid #7f7f7f;
-  text-align:center;
-  font-size:80%;
-  line-height:0.6;
-  font-family:arya;
   color:#ce181e;
-  font-weight:700;
   display:flex;
-  align-items:center;
+  font-family: "Open Sans", sans-serif;
+  font-size:80%;
+  font-weight:700;
   justify-content:center;
+  line-height:0.6;
+  text-align:center;
 }
 
 .winningPatternNames {
-  width:600px;
-  height:380px;
-  font-size:27px;
   display:grid;
+  font-size:27px;
   grid-template-columns:1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height:380px;
+  width:600px;
 }
 
 .winningPatternNames div {
-  display:flex;
   align-items:center;
+  display:flex;
   justify-content:center;
 }
 
 .cardExplanation {
-  height:70px;
-  display:flex;
   align-items:center;
-  justify-content:center;
+  display:flex;
   font-size:20px;
   font-style:italic;
+  height:70px;
+  justify-content:center;
 }
 
 .winningName, .bigBingoCardBody {
@@ -893,13 +878,13 @@ color:gray;
 }
 
 .winningName:hover {
-  cursor:pointer;
   color:#16639a;
+  cursor:pointer;
 }
 
 .bigBingoCardBody:hover {
-  cursor:pointer;
   background-color:#ddd;
+  cursor:pointer;
 }
 
 .bingoCardActive, .bingoCardActive2 {
@@ -911,8 +896,8 @@ color:gray;
 }
 
 .twoSections {
-  width:1000px;
-  height:100%;
   display:grid;
   grid-template-columns: 1fr 1fr;
+  height:100%;
+  width:1000px;
 }

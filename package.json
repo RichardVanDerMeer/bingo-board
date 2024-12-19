@@ -1,0 +1,19 @@
+{
+	"name": "bingo-master-board",
+	"version": "3.0.1",
+	"description": "Host and manage Bingo games on the Web",
+	"type": "module",
+	"scripts": {
+		"lint:js": "eslint assets/js/*.js",
+		"lint:css": "stylelint \"**/*.css\"",
+		"lint": "npm run lint:js && npm run lint:css",
+		"lint:fix": "eslint assets/js/*.js --fix && stylelint \"**/*.css\" --fix"
+	},
+	"devDependencies": {
+		"eslint": "^9.0.0-alpha.0",
+		"globals": "^13.24.0",
+		"stylelint": "^16.1.0",
+		"stylelint-config-standard": "^36.0.0",
+		"stylelint-order": "^6.0.4"
+	}
+}
