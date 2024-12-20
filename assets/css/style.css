@@ -1,3 +1,17 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-background: #fff;
+	--color-text: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #000;
+		--color-text: #fff;
+	}
+}
+
 @font-face {
 	font-family: Caladea;
 	font-style: italic;
@@ -76,7 +90,7 @@ body {
 }
 
 #area {
-	background: radial-gradient(#f7eaab, #bfbb73);
+	background: var(--color-background);
 	flex-shrink: 0;
 	font-size:30px;
 	height:720px;
@@ -383,8 +397,8 @@ h2 {
 .fullScreenToggleSmall {
 	pointer-events:auto;
 	position:absolute;
-	right:15px;
-	top:5px;
+	right:0;
+	top:0;
 	transform:scale(0.5);
 }
 
@@ -429,10 +443,10 @@ h2 {
 }
 
 .homeButtonLabel {
+	left: 0;
 	pointer-events:auto;
 	position:absolute;
-	right:50px;
-	top:5px;
+	top:0;
 }
 
 .smallMargin {
@@ -899,4 +913,16 @@ font-weight:700;
 	grid-template-columns: 1fr 1fr;
 	height:100%;
 	width:1000px;
+}
+
+.logo {
+	align-items:center;
+	display:flex;
+	justify-content:center;
+	margin-top: 3rem;
+}
+
+.logo img {
+	margin: 0 auto;
+	width: 75%;
 }
